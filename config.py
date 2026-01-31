@@ -40,7 +40,7 @@ def get_args():
     parser.add_argument("--token_t_overlap", type=int, default=0, help="Temporal token overlap")
     
     # Loss parameters
-    parser.add_argument("--loss_r", type=float, default=0.65, help="Loss weight ratio for masked vs unmasked")
+    parser.add_argument("--loss_r", type=float, default=0.75, help="Loss weight ratio for masked vs unmasked")
     
     args = parser.parse_args()
     return args

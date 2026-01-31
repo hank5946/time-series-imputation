@@ -98,7 +98,7 @@ date,feature1,feature2,feature3
 
 | Argument | Default | Description |
 |----------|---------|-------------|
-| `--loss_r` | 0.65 | Weight ratio for masked vs unmasked loss |
+| `--loss_r` | 0.75 | Weight ratio for masked vs unmasked loss |
 
 ## Example Commands
 
