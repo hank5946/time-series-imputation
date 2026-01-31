@@ -7,7 +7,7 @@ import torch
 import matplotlib.pyplot as plt
 import os
 
-from _data import denormalize
+from data import denormalize
 
 
 def evaluate_model(model, test_loader, device, data_mean, data_std, output_path, D):

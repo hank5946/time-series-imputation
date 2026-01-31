@@ -7,7 +7,7 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader, random_split
 
-from _mask import (
+from mask import (
     generate_mask_matrix,
     generate_mask_matrix_from_paper,
     generate_prediction_mask,

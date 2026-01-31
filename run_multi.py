@@ -17,17 +17,17 @@ import os
 
 # Local imports
 from config import get_args, get_device, setup_output_dirs
-from _data import (
+from data import (
     load_and_normalize_data,
     generate_masks,
     apply_mask,
     create_data_loaders
 )
-from _compute import compute_correlation_and_lag_matrix, MaskedWeightedMSELoss
-from _model import create_model
-from _train import train_model
-from _inference import evaluate_model
-from _visualization import draw_attention_map
+from compute import compute_correlation_and_lag_matrix, MaskedWeightedMSELoss
+from model import create_model
+from train import train_model
+from inference import evaluate_model
+from visualization import draw_attention_map
 
 
 def main():

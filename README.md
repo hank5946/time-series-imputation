@@ -8,14 +8,14 @@ A PyTorch implementation of a multi-scale transformer model for multivariate tim
 multi/
 ├── run_multi.py          # Main entry point - orchestrates the full pipeline
 ├── config.py             # Configuration and argument parsing
-├── _model.py             # Transformer model architecture
-├── _data.py              # Data loading, preprocessing, and dataset classes
-├── _mask.py              # Mask generation strategies
-├── _compute.py           # Correlation computation and loss functions
-├── _train.py             # Training loop and validation
-├── _inference.py         # Model evaluation and inference
-├── _visualization.py     # Attention maps and plotting utilities
-├── _utils.py             # General utility functions
+├── model.py              # Transformer model architecture
+├── data.py               # Data loading, preprocessing, and dataset classes
+├── mask.py               # Mask generation strategies
+├── compute.py            # Correlation computation and loss functions
+├── train.py              # Training loop and validation
+├── inference.py          # Model evaluation and inference
+├── visualization.py      # Attention maps and plotting utilities
+├── utils.py              # General utility functions
 └── README.md             # This file
 ```
 
@@ -161,7 +161,7 @@ You can import and use individual modules for custom workflows:
 
 ### Load and preprocess data
 ```python
-from _data import load_and_normalize_data, generate_masks, create_data_loaders
+from data import load_and_normalize_data, generate_masks, create_data_loaders
 
 data, timestamps, mean, std = load_and_normalize_data("data.csv")
 mask = generate_masks(data, missing_type=0, missing_rate=0.25, lm=10, seq_len=64)
@@ -169,7 +169,7 @@ mask = generate_masks(data, missing_type=0, missing_rate=0.25, lm=10, seq_len=64
 
 ### Create model
 ```python
-from _model import create_model, MultiScaleMultiTokenTransformerEncoder
+from model import create_model, MultiScaleMultiTokenTransformerEncoder
 import torch
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -180,21 +180,21 @@ model = MultiScaleMultiTokenTransformerEncoder(
 
 ### Run inference on single sequence
 ```python
-from _inference import impute_single_sequence
+from inference import impute_single_sequence
 
 imputed = impute_single_sequence(model, sequence, mask, device)
 ```
 
 ### Visualize attention maps
 ```python
-from _visualization import draw_attention_map
+from visualization import draw_attention_map
 
 draw_attention_map(model, test_loader, output_dir, device, D=8, num_samples=3)
 ```
 
 ### Compute metrics
 ```python
-from _utils import compute_metrics
+from utils import compute_metrics
 
 metrics = compute_metrics(ground_truth, predictions, mask)
 print(f"MSE: {metrics['mse']:.4f}, MAE: {metrics['mae']:.4f}")
