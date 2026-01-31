@@ -27,20 +27,17 @@ def get_args():
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     
     # Sequence parameters
-    parser.add_argument("--seq_len", type=int, default=64, help="Input sequence length")
-    parser.add_argument("--pred_len", type=int, default=0, help="Prediction length for forecasting")
+    parser.add_argument("--seq_len", type=int, default=512, help="Input sequence length")
+    parser.add_argument("--pred_len", type=int, default=128, help="Prediction length for forecasting")
     
     # Masking parameters
     parser.add_argument("--lm", type=int, default=10, help="Mean length of masked segments")
     parser.add_argument("--missing_rate", type=float, default=0.25, help="Rate of missing values")
-    parser.add_argument("--missing_type", type=int, default=0, choices=[0, 1, 2],
+    parser.add_argument("--missing_type", type=int, default=1, choices=[0, 1, 2],
                         help="0: Random missing, 1: Gaussian missing, 2: Prediction missing")
     
     # Tokenization parameters
-    parser.add_argument("--token_t_size", type=int, default=8, help="Temporal token size")
     parser.add_argument("--token_t_overlap", type=int, default=0, help="Temporal token overlap")
-    parser.add_argument("--token_d_size", type=int, default=8, help="Feature dimension token size")
-    parser.add_argument("--token_d_overlap", type=int, default=0, help="Feature dimension token overlap")
     
     # Loss parameters
     parser.add_argument("--loss_r", type=float, default=0.65, help="Loss weight ratio for masked vs unmasked")

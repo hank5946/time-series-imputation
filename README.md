@@ -77,25 +77,22 @@ date,feature1,feature2,feature3
 
 | Argument | Default | Description |
 |----------|---------|-------------|
-| `--seq_len` | 64 | Input sequence length |
-| `--pred_len` | 0 | Prediction length (for forecasting tasks) |
+| `--seq_len` | 512 | Input sequence length |
+| `--pred_len` | 128 | Prediction length (for forecasting tasks) |
 
 ### Masking Parameters
 
 | Argument | Default | Description |
 |----------|---------|-------------|
 | `--missing_rate` | 0.25 | Rate of missing values (0.0-1.0) |
-| `--missing_type` | 0 | Mask type: 0=Random, 1=Gaussian, 2=Prediction |
+| `--missing_type` | 1 | Mask type: 0=Random, 1=Gaussian, 2=Prediction |
 | `--lm` | 10 | Mean length of masked segments |
 
 ### Tokenization Parameters
 
 | Argument | Default | Description |
 |----------|---------|-------------|
-| `--token_t_size` | 8 | Temporal token/patch size |
 | `--token_t_overlap` | 0 | Overlap between temporal tokens |
-| `--token_d_size` | 8 | Feature dimension token size |
-| `--token_d_overlap` | 0 | Feature dimension token overlap |
 
 ### Loss Parameters
 
