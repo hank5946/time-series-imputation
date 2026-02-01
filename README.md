@@ -218,18 +218,3 @@ The model uses a **Multi-Scale Multi-Token Transformer** architecture:
 - **Type 1 (Gaussian/Geometric)**: Creates contiguous masked segments with geometric distribution
 - **Type 2 (Prediction)**: Masks the last portion of each sequence (for forecasting evaluation)
 
-## License
-
-MIT License
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@misc{multiscale_transformer_imputation,
-  title={Multi-Scale Transformer for Time Series Imputation},
-  year={2026},
-  url={https://github.com/your-repo}
-}
-```

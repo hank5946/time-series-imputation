@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Old/backup files
-run_multi_old.py
-
 # C extensions
 *.so
 
