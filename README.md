@@ -85,7 +85,7 @@ date,feature1,feature2,feature3
 | Argument | Default | Description |
 |----------|---------|-------------|
 | `--missing_rate` | 0.25 | Rate of missing values (0.0-1.0) |
-| `--missing_type` | 1 | Mask type: 0=Random missing, 1=segmental missing, 2=forecasting |
+| `--missing_type` | 1 | Mask type: 0=Random missing, 1=Segmental missing, 2=forecasting |
 | `--lm` | 10 | Mean length of masked segments |
 
 ### Tokenization Parameters
@@ -214,7 +214,7 @@ The model uses a **Multi-Scale Multi-Token Transformer** architecture:
 
 ## Mask Types
 
-- **Type 0 (Random)**: Randomly selects positions to mask based on missing_rate
-- **Type 1 (Gaussian/Geometric)**: Creates contiguous masked segments with geometric distribution
-- **Type 2 (Prediction)**: Masks the last portion of each sequence (for forecasting evaluation)
+- **Type 0 (Random missing)**: Randomly selects positions to mask based on missing_rate
+- **Type 1 (Segmental missing)**: Creates contiguous masked segments with geometric distribution
+- **Type 2 (Forecasting)**: Masks the last portion of each sequence (for forecasting evaluation)
 
