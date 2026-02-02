@@ -1,6 +1,6 @@
-# Multi-Scale Transformer for Time Series Imputation
+# MSPformer
 
-A PyTorch implementation of a multi-scale transformer model for multivariate time series imputation. This model uses multiple temporal scales with intra-variate and cross-variate attention mechanisms to effectively impute missing values in time series data.
+This is the implementation of the paper: Time Series Imputation and Forecasting with Multiscale Transformer
 
 ## Repository Structure
 
@@ -85,7 +85,7 @@ date,feature1,feature2,feature3
 | Argument | Default | Description |
 |----------|---------|-------------|
 | `--missing_rate` | 0.25 | Rate of missing values (0.0-1.0) |
-| `--missing_type` | 1 | Mask type: 0=Random, 1=Gaussian, 2=Prediction |
+| `--missing_type` | 1 | Mask type: 0=Random missing, 1=segmental missing, 2=forecasting |
 | `--lm` | 10 | Mean length of masked segments |
 
 ### Tokenization Parameters
