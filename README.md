@@ -2,7 +2,7 @@
 
 A PyTorch implementation of a multi-scale transformer model for multivariate time series imputation. This model uses multiple temporal scales with intra-variate and cross-variate attention mechanisms to effectively impute missing values in time series data.
 
-## Project Structure
+## Repository Structure
 
 ```
 multi/
